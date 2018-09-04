@@ -1365,7 +1365,9 @@ var TableRow = function TableRow(_ref) {
       restProps = objectWithoutProperties(_ref, ['children', 'row', 'tableRow']);
   return React.createElement(
     TableRowMUI,
-    restProps,
+    _extends({}, restProps, {
+      className: (restProps.className ? restProps.className : null) + ' ' + (row ? row.className : null)
+    }),
     children
   );
 };

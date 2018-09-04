@@ -363,9 +363,7 @@ var TableRow = {
 
     return h(
       'tr',
-      babelHelperVueJsxMergeProps([{ attrs: this.$attrs, on: this.$listeners }, {
-        'class': this.$attrs.class + ' ' + (this.row ? this.row.classname : null)
-      }]),
+      { attrs: this.$attrs, on: this.$listeners },
       [this.$slots.default]
     );
   }

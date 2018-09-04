@@ -7,6 +7,7 @@ export const TableRow = ({
 }) => (
   <tr
     {...restProps}
+    className={`${restProps.className ? restProps.className : null} ${row ? row.className : null}`}
   >
     {children}
   </tr>

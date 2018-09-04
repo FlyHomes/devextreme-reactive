@@ -9,6 +9,7 @@ export const TableRow = ({
 }) => (
   <TableRowMUI
     {...restProps}
+    className={`${restProps.className ? restProps.className : null} ${row ? row.className : null}`}
   >
     {children}
   </TableRowMUI>
