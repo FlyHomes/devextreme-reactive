@@ -24,6 +24,7 @@ export class RowLayout extends React.PureComponent {
       <Row
         tableRow={row}
         style={getRowStyle({ row })}
+        className={row.className}
       >
         {
           columns
