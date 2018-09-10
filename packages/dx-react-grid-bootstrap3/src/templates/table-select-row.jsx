@@ -7,10 +7,11 @@ export const TableSelectRow = ({
   style,
   onToggle,
   selectByRowClick,
+  tableRow,
 }) => (
   <tr
     style={style}
-    className={selected ? 'active' : ''}
+    className={`${selected ? 'active' : ''} ${tableRow.row && tableRow.row.className}`}
     onClick={(e) => {
       if (!selectByRowClick) return;
       e.stopPropagation();
@@ -27,6 +28,7 @@ TableSelectRow.propTypes = {
   onToggle: PropTypes.func,
   selectByRowClick: PropTypes.bool,
   style: PropTypes.object,
+  tableRow: PropTypes.object,
 };
 
 TableSelectRow.defaultProps = {
@@ -35,4 +37,5 @@ TableSelectRow.defaultProps = {
   selected: false,
   selectByRowClick: false,
   style: null,
+  tableRow: null,
 };

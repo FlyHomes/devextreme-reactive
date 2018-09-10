@@ -8,10 +8,12 @@ export const TableSelectRow = ({
   style,
   onToggle,
   selectByRowClick,
+  tableRow,
 }) => (
   <TableRow
     style={style}
     selected={selected}
+    className={tableRow && tableRow.row && tableRow.row.className}
     onClick={(e) => {
       if (!selectByRowClick) return;
       e.stopPropagation();
@@ -28,6 +30,7 @@ TableSelectRow.propTypes = {
   selected: PropTypes.bool,
   selectByRowClick: PropTypes.bool,
   style: PropTypes.object,
+  tableRow: PropTypes.object,
 };
 
 TableSelectRow.defaultProps = {
@@ -36,4 +39,5 @@ TableSelectRow.defaultProps = {
   selected: false,
   selectByRowClick: false,
   style: null,
+  tableRow: null,
 };
