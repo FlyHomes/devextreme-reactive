@@ -14,6 +14,8 @@ export const TableSelectRow = ({
     style={style}
     selected={selected}
     className={tableRow && tableRow.row && tableRow.row.className}
+    onMouseEnter={tableRow && tableRow.row && tableRow.row.onMouseEnter}
+    onMouseLeave={tableRow && tableRow.row && tableRow.row.onMouseLeave}
     onClick={(e) => {
       if (!selectByRowClick) return;
       e.stopPropagation();

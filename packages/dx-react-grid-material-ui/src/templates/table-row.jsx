@@ -8,6 +8,8 @@ export const TableRow = ({
   ...restProps
 }) => (
   <TableRowMUI
+    onMouseEnter={row && row.onMouseEnter}
+    onMouseLeave={row && row.onMouseLeave}
     {...restProps}
   >
     {children}
